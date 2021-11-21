@@ -1,3 +1,68 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.navbar {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.navbar-brand {
+  font-family: 'HanziPen TC',sans-serif;
+}
+
+li {
+  text-decoration: none;
+  color: #333333;
+}
+
+.user-contents {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+.sign-up {
+  text-decoration: none;
+  margin:0 20px;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.login {
+  text-decoration: none;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.app-introductions{
+  width: 100%;
+}
+
+.app-introduction {
+  width: 100vw;
+}
+
+.introduction-text span {
+ font-family: 'HanziPen TC',sans-serif;
+ font-size: 8vh;
+}
+
+.introduction-text {
+  font-size: 2vh;
+  text-shadow:0 0 10px gray;
+  color: grey;
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+}
