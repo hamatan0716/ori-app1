@@ -7,28 +7,28 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="form-group">
-        <%= f.label :nickname, "ニックネーム", class: "form-label" %>
-        <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control" %>
+        <%= f.label :nickname, class: "form-label visually-hidden" %>
+        <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control", placeholder:"ニックネーム" %>
       </div>
   
       <div class="form-group">
-        <%= f.label :email, "メールアドレス", class: "form-label" %>
-        <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
+        <%= f.label :email, class: "form-label visually-hidden" %>
+        <%= f.email_field :email, autocomplete: "email", class: "form-control mt-1", placeholder:"メールアドレス" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :profile, "プロフィール", class: "form-label" %>
-        <%= f.text_area :profile, autocomplete: "profile", class: "form-control", rows: "7" %>
+        <%= f.label :profile, "プロフィール", class: "form-label visually-hidden" %>
+        <%= f.text_area :profile, autocomplete: "profile", class: "form-control mt-1", placeholder:"プロフィール", rows: "7" %>
       </div>
   
       <div class="form-group">
-        <%= f.label :password, "パスワード (英数字含む%s文字以上)"%@minimum_password_length, class: "form-label" %>
-        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password, "パスワード (英数字含む%s文字以上)"%@minimum_password_length, class: "form-label visually-hidden" %>
+        <%= f.password_field :password, class: "form-control mt-1", placeholder: "パスワード(英数字含む６文字以上)"%>
       </div>
   
       <div class="form-group">
-        <%= f.label :password_confirmation, "もう一度パスワードを入力してください", class: "form-label" %>
-        <%= f.password_field :password_confirmation, class: "form-control" %>
+        <%= f.label :password_confirmation, "もう一度パスワードを入力してください", class: "form-label visually-hidden" %>
+        <%= f.password_field :password_confirmation, class: "form-control mt-1", placeholder:"もう一度パスワードを入力してください" %>
       </div>
   
       <div class="actions">
