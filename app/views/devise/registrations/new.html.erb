@@ -3,7 +3,7 @@
     <div class="card-body align-items-center">
       <h1 class="app-logo mt-5 mb-4 text-center">EnrIch</h1>
       <h3 class="main-title mt-2 mb-5 text-center">アカウント登録</h3>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="img-upload">
@@ -37,12 +37,14 @@
       </div>
   
       <div class="actions">
-        <%= f.submit "アカウントを登録", class: "btn btn-outline-danger btn-sm mt-5" %>
+        <%= f.submit "アカウントを登録", class: "btn btn-outline-danger btn-sm mt-3" %>
       </div>
       <% end %>
-      <div class="mt-4">
+      <div class="mt-4 mb-4">
         すでにアカウントをお持ちですか？<%= link_to "ログイン", new_user_session_path %>
       </div>
     </div>
   </div>
 </div>
+
+<%= render "devise/shared/user_footer" %>

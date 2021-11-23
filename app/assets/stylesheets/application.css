@@ -19,8 +19,16 @@
   text-decoration: none;
 }
 
+footer {
+ background-color: rgb(195, 195, 223);
+ color: papayawhip;
+ width: 100vw;
+ height: 10vh;
+}
+
 .registration {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  
 }
 
 .app-logo {
@@ -36,4 +44,10 @@
 
 .weight-bold-text {
   color: gray;
+}
+
+.signin {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  width: 100vw;
+  height: 90vh;
 }
