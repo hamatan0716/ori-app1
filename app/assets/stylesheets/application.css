@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+ * {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+footer {
+ background-color: rgb(195, 195, 223);
+ color: papayawhip;
+ width: 100vw;
+ height: 10vh;
+}
+
+.registration {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  
+}
+
+.app-logo {
+  font-family: 'HanziPen TC',sans-serif;
+  text-shadow:0 0 10px gray;
+  font-size: 8vh;
+}
+
+.main-title{
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 3vh;
+}
+
+.weight-bold-text {
+  color: gray;
+}
+
+.signin {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  width: 100vw;
+  height: 90vh;
+}
