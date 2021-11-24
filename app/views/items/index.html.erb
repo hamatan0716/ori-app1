@@ -15,7 +15,7 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
               <li><%= link_to 'マイページ', "#", class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
-              <li><%= link_to '投稿する', "#", class: "dropdown-item" %>
+              <li><%= link_to '投稿する', new_item_path, class: "dropdown-item" %>
               <li><hr class="dropdown-divider"></li>
               <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
             </ul>
