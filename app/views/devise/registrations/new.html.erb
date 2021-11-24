@@ -13,12 +13,12 @@
 
       <div class="form-group">
         <%= f.label :nickname, class: "form-label visually-hidden" %>
-        <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control mt-1", placeholder:"ニックネーム" %>
+        <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control mt-1", placeholder:"ニックネーム【必須】" %>
       </div>
   
       <div class="form-group">
         <%= f.label :email, class: "form-label visually-hidden" %>
-        <%= f.email_field :email, autocomplete: "email", class: "form-control mt-1", placeholder:"メールアドレス" %>
+        <%= f.email_field :email, autocomplete: "email", class: "form-control mt-1", placeholder:"メールアドレス【必須】" %>
       </div>
 
       <div class="form-group">
@@ -28,12 +28,12 @@
   
       <div class="form-group">
         <%= f.label :password, "パスワード (英数字含む%s文字以上)"%@minimum_password_length, class: "form-label visually-hidden" %>
-        <%= f.password_field :password, class: "form-control mt-1", placeholder: "パスワード(英数字含む６文字以上)"%>
+        <%= f.password_field :password, class: "form-control mt-1", placeholder: "パスワード(英数字含む６文字以上)【必須】"%>
       </div>
   
       <div class="form-group">
         <%= f.label :password_confirmation, "もう一度パスワードを入力してください", class: "form-label visually-hidden" %>
-        <%= f.password_field :password_confirmation, class: "form-control mt-1", placeholder:"もう一度パスワードを入力してください" %>
+        <%= f.password_field :password_confirmation, class: "form-control mt-1", placeholder:"もう一度パスワードを入力してください【必須】" %>
       </div>
   
       <div class="actions">
