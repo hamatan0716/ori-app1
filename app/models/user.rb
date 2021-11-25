@@ -8,5 +8,6 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 200 }
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 
+  has_many :items
   has_one_attached :avatar
 end
