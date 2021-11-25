@@ -4,7 +4,7 @@
       <h1 class="app-logo mt-5 mb-4 text-center">EnrIch</h1>
       <h3 class="main-title mt-2 mb-5 text-center">ログイン</h3>
       <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render "devise/shared/error_messages", model: f.object %>
 
         <div class="form-group">
           <%= f.label :email, class: "form-label visually-hidden" %>
