@@ -5,4 +5,9 @@ class Item < ApplicationRecord
   belongs_to :genre
 
   validates :genre_id, numericality: { other_than: 1 , message: "can't be blanck" }
+  with_options presence: true do
+    validates :name
+    validates :introduction
+    validates :image
+  end
 end
