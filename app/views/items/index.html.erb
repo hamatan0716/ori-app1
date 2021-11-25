@@ -1,33 +1,5 @@
-<nav class="navbar navbar-light ">
-  <div class="container-fluid">
-    <div class="left-contents">
-      <a class="navbar-brand fs-1" href="#">EnrIch</a>
-    </div>
-    <div class="right-contents">
-      <div class="user-contents">
-        <% if user_signed_in? %>
-          <div class="dropdown">
-            <!-- 切替ボタンの設定 -->
-            <button type="button" class="btn btn-link dropdown-toggle fs-5 text-black" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <%= current_user.nickname %>
-            </button>
-            <!-- ドロップメニューの設定 -->
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-              <li><%= link_to 'マイページ', "#", class: "dropdown-item" %></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><%= link_to '投稿する', "#", class: "dropdown-item" %>
-              <li><hr class="dropdown-divider"></li>
-              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
-            </ul>
-          </div>
-        <% else %>
-          <li><a class="login text-danger" href="/users/sign_in">ログイン</a></li>
-          <li><a class="sign-up text-danger" href="/users/sign_up">アカウント登録</a></li>
-        <% end %>
-      </div> 
-    </div>
-  </div>
-</nav>
+<%= render "items_header" %>
+
 <div class="app-introduction">
     <div class="introduction">
       <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
