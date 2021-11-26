@@ -1,12 +1,5 @@
 <%= render "items_header" %>
 
-
-<div class="app-introduction">
-  <div class="introduction">
-    <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
-  <div>
-</div>
-
 <div class="wrapper">
   <div class="top-contents">
     <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
@@ -29,7 +22,7 @@
                   <% if item.user.avatar.present? %>
                     <%= image_tag item.user.avatar, class: "article-user-icon" %>
                   <% end %>
-                  <%= item.user.nickname %>
+                <span class="article-username"><%= item.user.nickname %></span>
                 </div>
             </div>
           </div>

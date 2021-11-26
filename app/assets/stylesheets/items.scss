@@ -90,3 +90,27 @@ li {
   border-image-repeat: stretch;
   font-family: 'M PLUS 1p', sans-serif;
 }
+
+.item-img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.article-user-icon{
+  height: 18px;
+  width: 18px;
+}
+
+.article-title {
+  font-size: medium;
+}
+
+.article-text {
+  font-size: small;
+  color: gray;
+}
+
+.article-username {
+  font-size: small;
+}
