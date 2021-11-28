@@ -1,0 +1,21 @@
+<%= render "items_header" %>
+
+<div class="wrapper-show">
+  <div class="wrapper-showcontents text-center rounded-3 ">
+    <div class="show-user d-flex align-items-end">
+      <%= image_tag @item.user.avatar, size: '50x50' %> 
+      <%= @item.user.nickname %>
+    </div>
+    <div class = mt-5>
+      <%= @item.name %>
+    </div>
+    <div class="mt-3">
+      <%= image_tag @item.image, size: '220x220', class: "img-thumbnail" %>
+    </div>
+    <div class="show-text">
+      <%= @item.introduction %>
+    </div>
+  </div>
+</div>
+
+<%= render "devise/shared/user_footer" %>
