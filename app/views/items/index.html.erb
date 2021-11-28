@@ -1,12 +1,5 @@
 <%= render "items_header" %>
 
-
-<div class="app-introduction">
-  <div class="introduction">
-    <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
-  <div>
-</div>
-
 <div class="wrapper">
   <div class="top-contents">
     <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
@@ -15,10 +8,12 @@
     <div class="row">
       <% @items.each do |item| %>
         <div class="col-md-3 col-sm-6">
-          <div class="card shadow-sm">
-            <div class="bd-placeholder-img card-img-top" width="100%" height="180">
-              <%= image_tag item.image, class: "item-img" %>
-            </div>
+          <div class="card shadow-lg">
+            <%= link_to item_path(item.id) do %>
+              <div class="bd-placeholder-img card-img-top" width="100%" height="180">
+                <%= image_tag item.image, class: "item-img" %>
+              </div>
+            <% end %>
             
             <div class="card-body">
                 <h4 class="article-title"><%= item.name %></h4>
@@ -29,7 +24,7 @@
                   <% if item.user.avatar.present? %>
                     <%= image_tag item.user.avatar, class: "article-user-icon" %>
                   <% end %>
-                  <%= item.user.nickname %>
+                <span class="article-username"><%= item.user.nickname %></span>
                 </div>
             </div>
           </div>

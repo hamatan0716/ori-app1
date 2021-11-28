@@ -17,8 +17,7 @@
 }
 
 .navbar {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-}
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);}
 
 .navbar-brand {
   font-family: 'HanziPen TC',sans-serif;
@@ -89,4 +88,51 @@ li {
   border-image-slice: 1;
   border-image-repeat: stretch;
   font-family: 'M PLUS 1p', sans-serif;
+}
+
+.item-img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.article-user-icon{
+  height: 18px;
+  width: 18px;
+}
+
+.article-title {
+  font-size: medium;
+}
+
+.article-text {
+  font-size: small;
+  color: gray;
+}
+
+.article-username {
+  font-size: small;
+  border-bottom: 1px solid black;
+}
+
+// items show
+.wrapper-show {
+  background-color: rgb(218, 216, 216);
+  width: 100%;
+  padding: 3% 15%;
+}
+
+.wrapper-showcontents {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  padding: 15px 15px;
+}
+
+.show-user {
+  border-bottom: double rgb(211, 210, 210);
+  padding-bottom: 5px;
+}
+.show-text {
+  margin-top: 40px;
+  padding: 0 10vw;
 }
