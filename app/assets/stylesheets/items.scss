@@ -83,10 +83,9 @@ li {
 }
 
 .item-post-title {
-  border-bottom: solid 2px transparent;
+  border-bottom: solid 4px transparent;
   border-image: url("https://www.infocrest.co.jp/ykxbdgs5qgq3/uploads/2019/10/blog_m02_2.jpg");
   border-image-slice: 1;
-  border-image-repeat: stretch;
   font-family: 'M PLUS 1p', sans-serif;
 }
 
@@ -115,7 +114,7 @@ li {
   border-bottom: 1px solid black;
 }
 
-// items show
+// 投稿詳細
 .wrapper-show {
   background-color: rgb(218, 216, 216);
   width: 100%;
@@ -135,4 +134,12 @@ li {
 .show-text {
   margin-top: 40px;
   padding: 0 10vw;
+}
+
+// 投稿編集
+.item-edit-title {
+  border-bottom: 4px solid;
+    border-image: linear-gradient(to right, red 0%, yellow 100%);
+    border-image-slice: 1;
+    font-family: 'M PLUS 1p', sans-serif;
 }
