@@ -15,7 +15,7 @@
     <% if user_signed_in? && current_user.id == @item.user.id %>
       <div class="text-end mt-2">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <%= link_to '編集', "#", class: "btn btn-sm btn-outline-secondary" %>
+            <%= link_to '編集', edit_item_path(@item.id), class: "btn btn-sm btn-outline-secondary" %>
             <%= link_to '削除', item_path(@item.id), method: :delete, data: { confirm: '投稿を削除しますか？'}, class: "btn btn-sm btn-outline-secondary" %>
         </div>
       </div>
