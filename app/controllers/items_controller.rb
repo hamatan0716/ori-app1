@@ -27,6 +27,14 @@ class ItemsController < ApplicationController
     redirect_to root_path
   end
 
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
   private
   def prams_item
     params.require(:item).permit(:name, :introduction, :genre_id, :image).merge(user_id: current_user.id)
