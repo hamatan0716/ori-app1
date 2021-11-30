@@ -20,7 +20,7 @@
             </button>
             <!-- ドロップメニューの設定 -->
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-              <li><%= link_to 'マイページ', "#", class: "dropdown-item" %></li>
+              <li><%= link_to 'マイページ', user_path(current_user.id), class: "dropdown-item" %></li>
               <li><hr class="dropdown-divider"></li>
               <li><%= link_to '投稿する', new_item_path, class: "dropdown-item" %>
               <li><hr class="dropdown-divider"></li>
