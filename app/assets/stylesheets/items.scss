@@ -145,6 +145,21 @@ li {
   padding: 0 10vw;
 }
 
+.wrapper-comments {
+  height: 100%;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.comment-form {
+  width: 70%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid red;
+  background-color: rgb(241, 240, 240);
+  height: 45px;
+}
+
 // 投稿編集
 .item-edit-title {
   border-bottom: 4px solid;

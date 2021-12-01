@@ -32,6 +32,16 @@
       <%= @item.introduction %>
     </div>
   </div>
+
+  <div class="wrapper-comments">
+    <div class="mt-5 text-center">
+      <%= form_with(model: [@item, @comment], local: true) do |form| %>
+          <%= form.label :text, class: "form-label visually-hidden" %>
+          <%= form.text_field :text, placeholder: "コメントする", class: "comment-form" %>
+          <%= form.submit "投稿", class: "btn btn-outline-secondary btn-sm"%>
+      <% end %>
+    </div>
+  </div>
   
 </div>
 
