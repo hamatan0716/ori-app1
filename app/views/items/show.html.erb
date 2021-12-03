@@ -39,9 +39,9 @@
     
     <div class="text-center">
       <% if current_user.wanted_by?(@item.id) %>
-        <p><%= link_to 'いいねを外す', destroy_want_path(@item), method: :DELETE %></p>
+        <p><%= link_to 'いいねを外す', destroy_want_path(@item), method: :DELETE %><%= @item.wants.count %></p>
       <% else %>
-        <p><%= link_to 'いいね', create_want_path(@item), method: :POST %></p>
+        <p><%= link_to 'いいね', create_want_path(@item), method: :POST %><%= @item.wants.count %></p>
       <% end %>
     </div>
 
