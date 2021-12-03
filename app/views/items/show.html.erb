@@ -37,11 +37,11 @@
       <%= @item.introduction %>
     </div>
     
-    <div class="text-center">
+    <div class="text-center" id="item_<%= @item.id %>">
       <% if current_user.wanted_by?(@item.id) %>
-        <p><%= link_to 'いいねを外す', destroy_want_path(@item), method: :DELETE %><%= @item.wants.count %></p>
+        <p><%= link_to '欲しいを外す', destroy_want_path(@item), method: :DELETE, remote: true %><%= @item.wants.count %></p>
       <% else %>
-        <p><%= link_to 'いいね', create_want_path(@item), method: :POST %><%= @item.wants.count %></p>
+        <p><%= link_to '欲しい', create_want_path(@item), method: :POST, remote: true %><%= @item.wants.count %></p>
       <% end %>
     </div>
 
