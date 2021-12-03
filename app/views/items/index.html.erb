@@ -16,18 +16,18 @@
             <% end %>
             
             <div class="card-body">
-                <h4 class="article-title"><%= item.name %></h4>
-                <p class="article-text card-text text-truncate">
-                  <%= item.introduction %>
-                </p>
-                <div class="article-user">
+              <h4 class="article-title"><%= item.name %></h4>
+              <p class="article-text card-text text-truncate">
+                <%= item.introduction %>
+              </p>
+              <div class="article-user">
                 <%= link_to user_path(item.user_id), class: "user-show-link" do %>
                   <% if item.user.avatar.present? %>
                     <%= image_tag item.user.avatar, class: "article-user-icon" %>
                   <% end %>
                   <span class="article-username"><%= item.user.nickname %></span>
                 <% end %>
-                </div>
+              </div>
             </div>
           </div>
         </div>

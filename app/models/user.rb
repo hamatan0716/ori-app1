@@ -12,4 +12,9 @@ class User < ApplicationRecord
   has_many :comments
   has_many :wants
   has_one_attached :avatar
+
+  def wanted_by?(item_id)
+    wants.where(item_id: item_id).exists?
+  end
+  
 end
