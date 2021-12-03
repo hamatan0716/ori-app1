@@ -10,5 +10,6 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :comments
+  has_many :wants
   has_one_attached :avatar
 end
