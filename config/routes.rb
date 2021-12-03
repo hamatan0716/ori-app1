@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   resources :users, only: [:show]
-  post 'like/:id' => 'likes#create', as: 'create_like'
+  post 'want/:id' => 'wants#create', as: 'create_want'
+  delete 'want/:id' => 'wants#destroy', as: 'destroy_want'
 end
