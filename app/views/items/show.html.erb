@@ -41,7 +41,7 @@
       <% if current_user.wanted_by?(@item.id) %>
         <p>欲しいを外す</p>
       <% else %>
-        <p>欲しい</p>
+        <p><%= link_to 'いいね', create_like_path(@item), method: :POST %></p>
       <% end %>
     </div>
 
