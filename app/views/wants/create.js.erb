@@ -1,1 +1,1 @@
-document.getElementById('item_<%= @item.id %>').innerHTML = '<p><%= link_to '欲しいを外す', destroy_want_path(@item), method: :DELETE, remote: true %><%= @item.wants.count %></p>';
+document.getElementById('item_<%= @item.id %>').innerHTML = '<%= j(render 'items/post') %>'

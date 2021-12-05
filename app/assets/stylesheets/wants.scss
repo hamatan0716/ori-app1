@@ -1,3 +1,22 @@
 // Place all the styles related to the wants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.want-link {
+  text-decoration: none;
+}
+
+.want-btn {
+  color: #808080;
+  border: 2px solid lightgray;
+  border-radius: 20px;
+  padding: 3px 8px;
+}
+ 
+.unwant-btn {
+  color: #e54747;
+  border: 2px solid #e54747;
+  border-radius: 20px;
+  padding: 3px 8px;
+}
+

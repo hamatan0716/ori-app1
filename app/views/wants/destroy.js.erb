@@ -1,1 +1,1 @@
-document.getElementById('item_<%= @item.id %>').innerHTML = '<p><%= link_to '欲しい', create_want_path(@item), method: :POST, remote: true %><%= @item.wants.count %></p>'
+document.getElementById('item_<%= @item.id %>').innerHTML = '<%= j(render 'items/post') %>'

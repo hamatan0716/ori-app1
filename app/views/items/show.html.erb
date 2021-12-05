@@ -2,7 +2,7 @@
 
 <div class="wrapper">
   <%# 投稿内容 %>
-  <div class="wrapper-showcontents rounded-3">
+  <div class="wrapper-showcontents rounded-3" >
     <div class="show-user">
       <%= link_to user_path(@item.user_id), class: "user-show-link" do %>
         <% if @item.user.avatar.present? %>
@@ -37,14 +37,9 @@
       <%= @item.introduction %>
     </div>
     
-    <div class="text-center" id="item_<%= @item.id %>">
-      <% if current_user.wanted_by?(@item.id) %>
-        <p><%= link_to '欲しいを外す', destroy_want_path(@item), method: :DELETE, remote: true %><%= @item.wants.count %></p>
-      <% else %>
-        <p><%= link_to '欲しい', create_want_path(@item), method: :POST, remote: true %><%= @item.wants.count %></p>
-      <% end %>
+    <div id="item_<%= @item.id %>">
+      <%= render 'post' %>
     </div>
-
   </div>
 
   <%# コメント %>
