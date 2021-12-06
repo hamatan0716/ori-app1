@@ -33,12 +33,12 @@
       <%= image_tag @item.image, size: '220x220', class: "img-thumbnail" %>
     </div>
     
-    <div class="show-text text-center">
+    <div class="show-text text-center mb-4">
       <%= @item.introduction %>
     </div>
     
     <div id="item_<%= @item.id %>">
-      <%= render 'post' %>
+      <%= render 'want' %>
     </div>
   </div>
 
