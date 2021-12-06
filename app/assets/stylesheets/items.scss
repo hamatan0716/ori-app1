@@ -120,6 +120,21 @@ li {
   border-bottom: 1px solid black;
 }
 
+.post-image {
+  position: relative;
+}
+
+.evaluation {
+  position: absolute;
+  bottom: 0px;
+  right: 1px;
+  background-color: lightgrey;
+  border-radius: 15px;
+  padding: 0 5px;
+  color: rgb(77, 76, 76);
+  
+}
+
 // 投稿詳細
 
 .user-show-link {
@@ -155,9 +170,9 @@ li {
   width: 70%;
   outline: none;
   border: none;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid red;
   background-color: rgb(241, 240, 240);
-  height: 45px;
+  height: 35px;
 }
 
 .comment-box{

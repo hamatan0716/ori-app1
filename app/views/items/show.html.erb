@@ -1,7 +1,8 @@
 <%= render "items_header" %>
 
 <div class="wrapper">
-  <div class="wrapper-showcontents rounded-3">
+  <%# 投稿内容 %>
+  <div class="wrapper-showcontents rounded-3" >
     <div class="show-user">
       <%= link_to user_path(@item.user_id), class: "user-show-link" do %>
         <% if @item.user.avatar.present? %>
@@ -14,6 +15,7 @@
         <%= @item.user.nickname %>
       <% end %>
     </div>
+    
     <% if user_signed_in? && current_user.id == @item.user.id %>
       <div class="text-end mt-2">
         <div class="btn-group" role="group" aria-label="Basic example">
@@ -22,17 +24,25 @@
         </div>
       </div>
     <% end %>
+    
     <div class="text-center mt-3">
       <%= @item.name %>
     </div>
+    
     <div class="text-center mt-3">
       <%= image_tag @item.image, size: '220x220', class: "img-thumbnail" %>
     </div>
-    <div class="show-text text-center">
+    
+    <div class="show-text text-center mb-4">
       <%= @item.introduction %>
+    </div>
+    
+    <div id="item_<%= @item.id %>">
+      <%= render 'want' %>
     </div>
   </div>
 
+  <%# コメント %>
   <div class="wrapper-comments">
     <div class="mt-5 text-center">
       <% if user_signed_in? %>
