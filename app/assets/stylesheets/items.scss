@@ -42,13 +42,19 @@ li {
 
 .sign-up {
   text-decoration: none;
-  margin:0 20px;
-  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  margin:0 10px;
+  background-color: rgba(109, 214, 3, 0.699);
+  color: white;
+  padding: 15px 20px;
+  font-size: small;
 }
 
 .login {
   text-decoration: none;
-  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  background-color: rgba(109, 214, 3, 0.699);
+  color: white;
+  padding: 15px 20px;
+  font-size: small;
 }
 
 .app-introductions{
@@ -80,7 +86,6 @@ li {
 .user-icon {
   height: 42px;
   width: 42px;
-  margin-right: 6px;
 }
 
 .item-post {
