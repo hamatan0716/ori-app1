@@ -1,13 +1,19 @@
-<div class="text-start" >
-      <% if current_user.wanted_by?(@item.id) %>
-        <%= link_to destroy_want_path(@item), class: "want-link", method: :DELETE, remote: true do %>
-          <span class="unwant-btn">ほしい</span>
-        <% end %>
-        <%= @item.wants.count %>
-      <% else %>
-        <%= link_to create_want_path(@item), class: "want-link", method: :POST, remote: true do %>
-          <span class="want-btn">ほしい</span>
-        <% end %>
-        <%= @item.wants.count %>
-      <% end %>
-    </div>
+<div class="want-content text-start" >
+  <% if current_user.wanted_by?(@item.id) %>
+    <%= link_to destroy_want_path(@item), class: "want-link", method: :DELETE, remote: true do %>
+      <div class="unwant-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile align-items-center"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+        ほしい！
+      </div>
+    <% end %>
+    <p class="mb-0"><%= @item.wants.count %></p>
+  <% else %>
+    <%= link_to create_want_path(@item), class: "want-link", method: :POST, remote: true do %>
+      <div class="want-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh align-items-center"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+        ほしい！
+      </div>
+    <% end %>
+    <p class="mb-0"><%= @item.wants.count %></p>
+  <% end %>
+</div>

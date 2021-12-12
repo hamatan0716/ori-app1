@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.want-content {
+  display: flex;
+  align-items: center;
+}
 .want-link {
   text-decoration: none;
 }
@@ -11,6 +15,10 @@
   border: 2px solid lightgray;
   border-radius: 20px;
   padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  width: 105px;
+  margin-right: 6px;
 }
  
 .unwant-btn {
@@ -19,5 +27,8 @@
   background-color: #e54747;
   border-radius: 20px;
   padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  width: 105px;
+  margin-right: 6px;
 }
-
