@@ -1,48 +1,46 @@
 <div class="registration">
-  <div class="col-md-5 mx-auto">
-    <div class="card-body align-items-center">
-      <h1 class="app-logo mt-5 mb-4 text-center">EnrIch</h1>
-      <h3 class="main-title mt-2 mb-5 text-center">アカウント登録</h3>
-      <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-      <%= render "devise/shared/error_messages", model: f.object %>
+  <div class="card-body col-sm-5 mx-auto">
+    <h1 class="app-logo mt-5 mb-4 text-center">EnrIch</h1>
+    <h3 class="main-title mt-2 mb-5 text-center">アカウント登録</h3>
+    <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+    <%= render "devise/shared/error_messages", model: f.object %>
 
-      <div class="img-upload">
-          <%= f.label :avatar, "プロフィール画像",  class: "form-label text-secondary" %>
-          <%= f.file_field :avatar, id:"user-image", class: "form-control" %>
-      </div>
+    <div class="img-upload">
+        <%= f.label :avatar, "プロフィール画像",  class: "form-label text-secondary" %>
+        <%= f.file_field :avatar, id:"user-image", class: "form-control" %>
+    </div>
 
-      <div class="form-group">
-        <%= f.label :nickname, class: "form-label visually-hidden" %>
-        <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control mt-1", placeholder:"ニックネーム【必須】" %>
-      </div>
-  
-      <div class="form-group">
-        <%= f.label :email, class: "form-label visually-hidden" %>
-        <%= f.email_field :email, autocomplete: "email", class: "form-control mt-1", placeholder:"メールアドレス【必須】" %>
-      </div>
+    <div class="form-group">
+      <%= f.label :nickname, class: "form-label visually-hidden" %>
+      <%= f.text_field :nickname, autocomplete: "nickname", class: "form-control mt-1", placeholder:"ニックネーム【必須】" %>
+    </div>
 
-      <div class="form-group">
-        <%= f.label :profile, "プロフィール", class: "form-label visually-hidden" %>
-        <%= f.text_area :profile, autocomplete: "profile", class: "form-control mt-1", placeholder:"プロフィール", rows: "7" %>
-      </div>
-  
-      <div class="form-group">
-        <%= f.label :password, "パスワード (英数字含む%s文字以上)"%@minimum_password_length, class: "form-label visually-hidden" %>
-        <%= f.password_field :password, class: "form-control mt-1", placeholder: "パスワード(英数字含む６文字以上)【必須】"%>
-      </div>
-  
-      <div class="form-group">
-        <%= f.label :password_confirmation, "もう一度パスワードを入力してください", class: "form-label visually-hidden" %>
-        <%= f.password_field :password_confirmation, class: "form-control mt-1", placeholder:"もう一度パスワードを入力してください【必須】" %>
-      </div>
-  
-      <div class="actions">
-        <%= f.submit "アカウントを登録", class: "btn btn-outline-danger btn-sm mt-3" %>
-      </div>
-      <% end %>
-      <div class="mt-4 mb-4">
-        すでにアカウントをお持ちですか？<%= link_to "ログイン", new_user_session_path %>
-      </div>
+    <div class="form-group">
+      <%= f.label :email, class: "form-label visually-hidden" %>
+      <%= f.email_field :email, autocomplete: "email", class: "form-control mt-1", placeholder:"メールアドレス【必須】" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :profile, "プロフィール", class: "form-label visually-hidden" %>
+      <%= f.text_area :profile, autocomplete: "profile", class: "form-control mt-1", placeholder:"プロフィール", rows: "7" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, "パスワード (英数字含む%s文字以上)"%@minimum_password_length, class: "form-label visually-hidden" %>
+      <%= f.password_field :password, class: "form-control mt-1", placeholder: "パスワード(英数字含む６文字以上)【必須】"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, "もう一度パスワードを入力してください", class: "form-label visually-hidden" %>
+      <%= f.password_field :password_confirmation, class: "form-control mt-1", placeholder:"もう一度パスワードを入力してください【必須】" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "アカウントを登録", class: "btn btn-outline-danger btn-sm mt-3" %>
+    </div>
+    <% end %>
+    <div class="mt-4 mb-4">
+      すでにアカウントをお持ちですか？<%= link_to "ログイン", new_user_session_path %>
     </div>
   </div>
 </div>

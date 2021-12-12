@@ -13,12 +13,6 @@
  *= require_tree .
  *= require_self
  */
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/regular';
-@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/v4-shims';
  
 * {
   margin: 0px;
@@ -35,7 +29,6 @@ footer {
 
 .registration {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  
 }
 
 .app-logo {

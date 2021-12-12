@@ -1,12 +1,12 @@
 <div class="text-start" >
       <% if current_user.wanted_by?(@item.id) %>
         <%= link_to destroy_want_path(@item), class: "want-link", method: :DELETE, remote: true do %>
-          <span class="unwant-btn"><i class="far fa-grin-stars"></i>ほしい</span>
+          <span class="unwant-btn">ほしい</span>
         <% end %>
         <%= @item.wants.count %>
       <% else %>
         <%= link_to create_want_path(@item), class: "want-link", method: :POST, remote: true do %>
-          <span class="want-btn"><i class="far fa-grin-stars"></i>ほしい</span>
+          <span class="want-btn">ほしい</span>
         <% end %>
         <%= @item.wants.count %>
       <% end %>
