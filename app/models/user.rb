@@ -8,9 +8,9 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 200 }
   validates :password, presence: true, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }, on: :create
 
-  has_many :items
-  has_many :comments
-  has_many :wants
+  has_many :items, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :wants, dependent: :destroy
   has_one_attached :avatar
   # 欲しいボタン
   def wanted_by?(item_id)
