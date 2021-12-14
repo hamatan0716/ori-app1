@@ -1,13 +1,20 @@
 <%= render "items_header" %>
 
 <div class="wrapper">
-  <div class="top-contents">
-    <p class="introduction-text"><span>EnrIch</span><br>生活を少しだけ豊かにしてくれるアイテムと出会えるアプリケーション</p>
+  <div class="top-head">
+    <div style="position: relative; display:inline-block;">
+      <%= image_tag 'house.png', class:"py-3" %>
+      <div style="position: absolute; top: 30%; left: 10px;">
+        <h1>EnrIch</h1>
+        <p>「買ってよかった」モノをシェアできるアプリケーション</p>
+        <p>あなたの生活を少し豊かにしてくれるアイテムと出会えるかもしれません</p></span>
+      </div>
+    </div>
   </div>
   <div class="container">
     <div class="row">
       <% @items.each do |item| %>
-        <div class="col-md-3 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6">
           <div class="card bg-light shadow-lg mb-3">
             <%= link_to item_path(item.id) do %>
               <div class="post-image bd-placeholder-img card-img-top" width="100%" height="180">
