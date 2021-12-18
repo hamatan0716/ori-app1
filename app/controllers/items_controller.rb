@@ -23,6 +23,10 @@ class ItemsController < ApplicationController
     @comments = @item.comments.includes(:user).order("created_at DESC")
   end
 
+  def search
+    @items = Item.search(params[:keyword])
+  end
+
   def destroy
     item = Item.find(params[:id])
     item.destroy
