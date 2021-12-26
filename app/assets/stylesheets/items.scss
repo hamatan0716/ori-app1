@@ -185,12 +185,15 @@ li {
   width: 70vw;
   padding: 15px;
   margin: 0 auto;
-  
 }
 
 .show-user {
-  border-bottom: double rgb(211, 210, 210);
   padding-bottom: 5px;
+}
+
+.post-day {
+  font-size: small;
+  color: grey;
 }
 .show-text {
   margin-top: 20px;
