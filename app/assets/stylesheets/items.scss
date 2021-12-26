@@ -21,12 +21,38 @@
   width: 100%;
 }
 
-.navbar {
+.topbar {
   background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  height: 60px;
+  padding: 0 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
   font-family: 'HanziPen TC',sans-serif;
+}
+
+.sbox{
+  height: 30px;
+  width: 30vw;
+  outline: none;
+  border: none;
+  padding: 0 2%;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px 0 0 5px;
+  font-size: small;
+}
+
+.sbtn{
+  height: 30px;
+  border: none;
+  padding: 0 10px;
+  border-radius: 0 5px 5px 0;
+  background-color: #7fbfff;
+  color: white;
+  font-size: small;
 }
 
 li {
@@ -138,10 +164,10 @@ li {
   position: absolute;
   bottom: 0px;
   right: 1px;
-  background-color: rgba(255, 166, 0, 0.849);
+  background-color: rgb(73, 73, 252);
   border-radius: 15px;
   padding: 3px 5px;
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
 }

@@ -1,19 +1,6 @@
 <%= render "items_header" %>
-
-<div class="wrapper">
-  <div class="top-head">
-    <div style="position: relative; display:inline-block;">
-      <%= image_tag 'house.png', class:"py-3" %>
-      <div style="position: absolute; top: 30%; left: 10px;">
-        <h1>EnrIch</h1>
-        <p>「買ってよかった」モノをシェアできるアプリケーション</p>
-        <p>あなたの生活を少し豊かにしてくれるアイテムと出会えるかもしれません</p></span>
-      </div>
-    </div>
-  </div>
-  
-  <%# 投稿一覧 %>
-  <div class="container">
+<h2 class="text-center mt-3">検索結果</h2>
+<div class="container mt-2">
     <div class="row">
       <% @items.each do |item| %>
         <div class="col-lg-3 col-md-4 col-6">
@@ -47,4 +34,3 @@
       <% end %>
     </div>
   </div>
-<div>

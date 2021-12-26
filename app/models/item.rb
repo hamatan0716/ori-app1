@@ -12,4 +12,13 @@ class Item < ApplicationRecord
     validates :introduction
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('introduction LIKE(?)', "%#{search}%")
+      Item.where('name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end
