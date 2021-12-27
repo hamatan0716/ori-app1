@@ -25,6 +25,13 @@ footer {
  color: papayawhip;
  width: 100vw;
  height: 10vh;
+ display: table;
+ text-align: center;
+}
+
+.footer-text {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .registration {
